@@ -6,7 +6,7 @@ from transformers import pipeline
 
 app = FastAPI()
 
-GNEWS_API_KEY = "0ab7871c731d9e6890a2b732a91cc50a"
+GNEWS_API_KEY = "Your API key"
 
 # Summarization and Sentiment models
 summarizer = pipeline("summarization", model="sshleifer/distilbart-cnn-12-6")
@@ -43,3 +43,4 @@ def get_news(location: str, start_date: str, end_date: str, category: str = "gen
         })
 
     return {"news": summaries}
+
