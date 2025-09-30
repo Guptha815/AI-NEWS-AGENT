@@ -47,12 +47,13 @@ with center:
             st.session_state["messages"].append(("user", f"{query_display} from {start_date} to {end_date}"))
             st.session_state["messages"].append(("bot", bot_reply))
 
-    # Display chat history with bubble style
+    # Displaying chat history with bubble style
     for role, msg in st.session_state["messages"]:
         if role == "user":
             st.markdown(f"<div style='background:#light-grey;padding:10px;border-radius:10px;margin:5px'><b>🧑 You:</b> {msg}</div>", unsafe_allow_html=True)
         else:
             st.markdown(f"<div style='background:#grey;padding:10px;border-radius:10px;margin:5px'>{msg}</div>", unsafe_allow_html=True)
+
 
 
 
